@@ -1,8 +1,13 @@
 import React from 'react'
+import Home from './page/Home/Home'
+import './App.css'
+import './index.css'
 
 const App = () => {
   return (
-    <div>App</div>
+   <>
+   <Home />
+   </>
   )
 }
 
