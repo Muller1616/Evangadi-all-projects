@@ -1,41 +1,45 @@
-.footer_outer_container{
+.footer_outer_container {
     background-color: black;
     color: grey;
     display: flex;
     justify-content: center;
+    padding: 20px 0;
 }
-.footer_inner_container{
+
+.footer_inner_container {
     width: 60%;
-    /* background-color: red; */
 }
-.footer_icons{
-    /* background-color: blue; */
+
+/* Icons section */
+.footer_icons {
     width: 12%;
     display: flex;
     justify-content: space-between;
     margin-left: 10px;
     color: #fff;
-
 }
-.footer_data{
+
+/* Footer data section */
+.footer_data {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap; /* allows columns to wrap on small screens */
 }
 
-.footer_data ul{
+.footer_data ul {
     list-style: none;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     height: 12vh;
-    /* background-color: blue; */
 }
 
-.footer_data ul li{
+.footer_data ul li {
     cursor: pointer;
 }
 
-.service_code{
+/* Service code button */
+.service_code {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -44,7 +48,80 @@
     margin: 10px 0;
     cursor: pointer;
 }
-.copy_write{
+
+/* Copyright */
+.copy_write {
     font-size: 12px;
     margin-bottom: 20px;
+    text-align: center;
+}
+
+/* ---------------------- */
+/*      RESPONSIVE        */
+/* ---------------------- */
+
+/* Tablets */
+@media (max-width: 1024px) {
+    .footer_inner_container {
+        width: 80%;
+    }
+
+    .footer_icons {
+        width: 20%;
+        margin-left: 5px;
+    }
+
+    .service_code {
+        width: 15%;
+        font-size: 0.9rem;
+    }
+}
+
+/* Large Phones / Small Tablets */
+@media (max-width: 768px) {
+    .footer_inner_container {
+        width: 90%;
+    }
+
+    .footer_data {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .footer_data ul {
+        height: auto;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer_icons {
+        width: 40%;
+        justify-content: space-around;
+        margin: 10px 0;
+    }
+
+    .service_code {
+        width: 25%;
+    }
+}
+
+/* Phones */
+@media (max-width: 480px) {
+    .footer_inner_container {
+        width: 95%;
+    }
+
+    .footer_icons {
+        width: 50%;
+    }
+
+    .service_code {
+        width: 35%;
+        font-size: 0.8rem;
+    }
+
+    .copy_write {
+        font-size: 10px;
+    }
 }
